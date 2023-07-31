@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * @author chensh
+ */
 public class HelloWorld {
     public static void main(String[] args) {
         Map<String, String> aMap = new HashMap<>();
@@ -15,6 +18,9 @@ public class HelloWorld {
         System.out.println(Objects.equals(aMap, bMap));
     }
 
+    public String sayHello() {
+        return "Hello Maven";
+    }
 
 
 }
