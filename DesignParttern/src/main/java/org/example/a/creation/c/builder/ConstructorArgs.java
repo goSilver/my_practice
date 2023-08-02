@@ -26,19 +26,18 @@ public class ConstructorArgs {
                 throw new IllegalArgumentException("...");
             }
             return new ConstructorArgs(this);
-            }
         }
+    }
 
-        public void setRef(boolean ref) {
-            isRef = ref;
-        }
+    public void setRef(boolean ref) {
+        isRef = ref;
+    }
 
-        public void setArg(Object arg) {
-            this.arg = arg;
-        }
+    public void setArg(Object arg) {
+        this.arg = arg;
+    }
 
-        public void setType(Class type) {
-            this.type = type;
-        }
+    public void setType(Class type) {
+        this.type = type;
     }
 }
