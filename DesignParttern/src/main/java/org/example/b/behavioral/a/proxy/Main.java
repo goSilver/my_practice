@@ -1,6 +1,8 @@
 package org.example.b.behavioral.a.proxy;
 
 /**
+ * 代理模式测试
+ *
  * @author goku
  * @datetime 2023/8/3 10:12 PM
  */

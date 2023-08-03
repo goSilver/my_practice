@@ -6,11 +6,13 @@ import org.springframework.cglib.proxy.Proxy;
 import java.lang.reflect.Method;
 
 /**
+ * 代理类
+ *
  * @author goku
  * @datetime 2023/8/3 10:02 PM
  */
 public class MetricsCollectorProxy {
-    private MetricsCollector metricsCollector;
+    private final MetricsCollector metricsCollector;
 
     public MetricsCollectorProxy() {
         this.metricsCollector = new MetricsCollector();
