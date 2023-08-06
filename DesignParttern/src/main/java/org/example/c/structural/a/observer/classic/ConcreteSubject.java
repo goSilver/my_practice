@@ -1,4 +1,4 @@
-package org.example.c.structural.a.observer;
+package org.example.c.structural.a.observer.classic;
 
 import java.util.ArrayList;
 import java.util.List;

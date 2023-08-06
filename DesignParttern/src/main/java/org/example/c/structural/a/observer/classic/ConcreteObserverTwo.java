@@ -1,4 +1,4 @@
-package org.example.c.structural.a.observer;
+package org.example.c.structural.a.observer.classic;
 
 /**
  * @author goku
