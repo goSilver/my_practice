@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>DesignParttern</module>
+        <module>LanguageFeature</module>
     </modules>
 
     <properties>
