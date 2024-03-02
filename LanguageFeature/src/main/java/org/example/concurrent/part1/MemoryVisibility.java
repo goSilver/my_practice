@@ -8,7 +8,7 @@ package org.example.concurrent.part1;
  * @author chensh
  * @datetime 2024/3/2 9:50 AM
  */
-public class Test {
+public class MemoryVisibility {
     private static long count = 0;
 
     private void add10K() {
@@ -19,7 +19,7 @@ public class Test {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Test t = new Test();
+        MemoryVisibility t = new MemoryVisibility();
         // 创建两个线程，执行累加操作
         Thread t1 = new Thread(t::add10K);
         Thread t2 = new Thread(t::add10K);
