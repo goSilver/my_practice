@@ -1,4 +1,4 @@
-package org.example.concurrent.part1;
+package org.example.concurrent;
 
 /**
  * 复现内存可见性问题案例

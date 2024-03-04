@@ -1,4 +1,4 @@
-package org.example.concurrent.part1;
+package org.example.concurrent;
 
 /**
  * @author chensh
