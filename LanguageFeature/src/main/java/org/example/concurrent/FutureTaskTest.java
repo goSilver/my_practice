@@ -22,10 +22,10 @@ public class FutureTaskTest {
         // T1依赖T2
         FutureTask<String> ft1 = new FutureTask<>(new T1Task(ft2));
         // 启动任务
-        Thread t2 = new Thread(ft2);
-        t2.start();
         Thread t1 = new Thread(ft1);
         t1.start();
+        Thread t2 = new Thread(ft2);
+        t2.start();
         // 获取t1的任务结果
         System.out.println(ft1.get());
     }
