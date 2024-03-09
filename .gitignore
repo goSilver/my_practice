@@ -2,3 +2,5 @@
 /.idea/
 /target/
 /LanguageFeature/target/
+/gc.log
+/java_pid33621.hprof
