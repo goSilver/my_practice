@@ -16,6 +16,7 @@ public class CompletableFutureTest {
 
     public static void main(String[] args) {
         // 任务1：洗水壶->烧开水
+        // runAsync()方法可以指定自定义线程池，避免oom
         CompletableFuture<Void> ft1 = CompletableFuture.runAsync(() -> {
             System.out.println("T1:洗水壶...");
             sleep(1);
