@@ -4,6 +4,8 @@ import java.lang.reflect.Field;
 
 /**
  * Field类及其用法
+ * <p>
+ * Field 提供有关类或接口的单个字段的信息，以及对它的动态访问权限。反射的字段可能是一个类（静态）字段或实例字段。
  *
  * @author chensh
  * @datetime 2024/3/10 7:37 PM
