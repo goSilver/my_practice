@@ -13,7 +13,7 @@ import java.lang.reflect.Field;
  * @author chensh
  * @datetime 2024/3/10 6:51 PM
  */
-public class ClassMethodExample {
+public class ReflectClassExample {
     public static void main(String[] args) throws IllegalAccessException, InstantiationException {
         Class<Dog> dog = Dog.class;
         // 类名打印
