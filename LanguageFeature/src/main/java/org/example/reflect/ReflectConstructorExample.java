@@ -10,7 +10,7 @@ import java.lang.reflect.Constructor;
  * @author chensh
  * @datetime 2024/3/10 7:13 PM
  */
-public class ConstructorMethodExample {
+public class ReflectConstructorExample {
     /**
      * 通过反射来创建对象
      *
