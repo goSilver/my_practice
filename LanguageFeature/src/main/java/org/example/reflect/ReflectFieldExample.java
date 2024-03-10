@@ -10,7 +10,7 @@ import java.lang.reflect.Field;
  * @author chensh
  * @datetime 2024/3/10 7:37 PM
  */
-public class FieldMethodExample {
+public class ReflectFieldExample {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException {
         // 获取Class对象
         Class<?> clazz = Class.forName("org.example.reflect.Student");
