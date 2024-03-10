@@ -4,6 +4,11 @@ import java.lang.reflect.Field;
 
 /**
  * Class类的方法
+ * <p>
+ * 获取class对象的方式的主要有三种
+ * 根据类名：类名.class
+ * 根据对象：对象.getClass()
+ * 根据全限定类名：Class.forName(全限定类名)
  *
  * @author chensh
  * @datetime 2024/3/10 6:51 PM
