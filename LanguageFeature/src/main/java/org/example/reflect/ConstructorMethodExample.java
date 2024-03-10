@@ -4,6 +4,8 @@ import java.lang.reflect.Constructor;
 
 /**
  * Constructor类及其用法
+ * <p>
+ * Constructor类存在于反射包(java.lang.reflect)中，反映的是Class 对象所表示的类的构造方法。
  *
  * @author chensh
  * @datetime 2024/3/10 7:13 PM
