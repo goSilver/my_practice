@@ -1,6 +1,7 @@
 package org.example.others;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -13,6 +14,8 @@ public class Main {
     public static void main(String[] args) {
         // Create a list of strings
         List<String> list = Arrays.asList("a", "b", "c");
+        LinkedList<String> linkedList = new LinkedList<>();
+        linkedList.remove();
         // Convert the list to a map using a lambda expression
         Map<String, String> map = list.stream()
                 .collect(Collectors.toMap(s -> s, s -> ""));
