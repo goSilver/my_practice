@@ -21,7 +21,7 @@ public class VolatileExample1 {
             @Override
             public void run() {
                 while (!stop) {
-                    // 踩坑：这里不能加print，因为print方法内部有synchronized关键字影响可见性
+                    // 踩坑：println()方法内部有synchronized关键字影响可见性
                     // System.out.println(Thread.currentThread().getName() + "，stop标志=false，不断自旋中~");
                 }
                 System.out.println(Thread.currentThread().getName() + " stopped");
