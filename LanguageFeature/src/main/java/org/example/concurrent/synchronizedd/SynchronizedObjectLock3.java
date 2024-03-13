@@ -25,6 +25,7 @@ public class SynchronizedObjectLock3 implements Runnable {
     }
 
     public static void main(String[] args) {
+        // 锁对象相同，两个线程串行
         Thread t1 = new Thread(instance);
         Thread t2 = new Thread(instance);
         t1.start();
@@ -34,6 +35,18 @@ public class SynchronizedObjectLock3 implements Runnable {
         当前线程：Thread-0 结束
         当前线程：Thread-1
         当前线程：Thread-1 结束
+         */
+
+        // 锁对象不同，两个线程并行
+        Thread t3 = new Thread(new SynchronizedObjectLock3());
+        Thread t4 = new Thread(new SynchronizedObjectLock3());
+        t3.start();
+        t4.start();
+        /*
+        当前线程：Thread-1
+        当前线程：Thread-0
+        当前线程：Thread-1 结束
+        当前线程：Thread-0 结束
          */
     }
 }
