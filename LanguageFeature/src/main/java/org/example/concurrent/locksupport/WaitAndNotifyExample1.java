@@ -2,6 +2,7 @@ package org.example.concurrent.locksupport;
 
 /**
  * 使用wait/notify实现线程同步
+ * 必须先调用wait，后调用notify，如果先调用notify，再调用wait，将起不了作用。
  *
  * @author chensh
  * @datetime 2024/3/15 5:15 PM
