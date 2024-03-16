@@ -1,4 +1,4 @@
-package org.example.concurrent;
+package org.example.concurrent.cyclicbarrier;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
@@ -10,7 +10,7 @@ import java.util.concurrent.CyclicBarrier;
  * @author chensh
  * @datetime 2024/3/5 9:37 PM
  */
-public class CyclicBarrierTest {
+public class CyclicBarrierExample1 {
 
     public static void main(String[] args) {
         // 定义一个计数器为2的CyclicBarrier，并注册一个回调函数
