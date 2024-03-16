@@ -1,4 +1,4 @@
-package org.example.concurrent;
+package org.example.concurrent.countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  * @author chensh
  * @datetime 2024/3/5 9:16 PM
  */
-public class CountDownLatchTest {
+public class CountDownLatchExample1 {
 
     public static void main(String[] args) throws InterruptedException {
         CountDownLatch latch = new CountDownLatch(2);
