@@ -11,6 +11,7 @@
     <modules>
         <module>DesignParttern</module>
         <module>LanguageFeature</module>
+        <module>Algorithm</module>
     </modules>
 
     <properties>
