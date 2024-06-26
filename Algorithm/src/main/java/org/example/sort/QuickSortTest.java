@@ -5,6 +5,11 @@ import org.example.util.OrderUtil;
 import org.junit.Test;
 
 /**
+ * 快速排序
+ * 时间复杂度：O(n2)
+ * 空间复杂度：O(1)
+ * 是否稳定：否
+ *
  * @author chensh
  * @datetime 2024/6/25 7:29 PM
  */
