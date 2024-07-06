@@ -1,7 +1,7 @@
 package org.example.sort;
 
 import cn.hutool.json.JSONUtil;
-import org.example.util.OrderUtil;
+import org.example.util.MyUtil;
 import org.junit.Test;
 
 /**
@@ -61,7 +61,7 @@ public class MergeSortTest {
         int[] arr = new int[]{5, 3, 4, 1, 2};
         int[] afterSort = sort(arr);
         System.out.println(JSONUtil.toJsonStr(afterSort));
-        assert OrderUtil.isOrderAsc(afterSort);
+        assert MyUtil.isOrderAsc(afterSort);
     }
 
     @Test
@@ -69,7 +69,7 @@ public class MergeSortTest {
         int[] arr = new int[]{5, 3, 3, 1, 2};
         int[] afterSort = sort(arr);
         System.out.println(JSONUtil.toJsonStr(afterSort));
-        assert OrderUtil.isOrderAsc(afterSort);
+        assert MyUtil.isOrderAsc(afterSort);
     }
 
     @Test
@@ -77,7 +77,7 @@ public class MergeSortTest {
         int[] arr = new int[]{0, 0, 0, 0, 0};
         int[] afterSort = sort(arr);
         System.out.println(JSONUtil.toJsonStr(afterSort));
-        assert OrderUtil.isOrderAsc(afterSort);
+        assert MyUtil.isOrderAsc(afterSort);
     }
 
     @Test
@@ -85,7 +85,7 @@ public class MergeSortTest {
         int[] arr = new int[]{0};
         int[] afterSort = sort(arr);
         System.out.println(JSONUtil.toJsonStr(afterSort));
-        assert OrderUtil.isOrderAsc(afterSort);
+        assert MyUtil.isOrderAsc(afterSort);
     }
 
     @Test
@@ -93,6 +93,6 @@ public class MergeSortTest {
         int[] arr = new int[]{1, 2, 3, 4, 5};
         int[] afterSort = sort(arr);
         System.out.println(JSONUtil.toJsonStr(afterSort));
-        assert OrderUtil.isOrderAsc(afterSort);
+        assert MyUtil.isOrderAsc(afterSort);
     }
 }
