@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.HashSet;
 
 /**
- * 无重复字符的最长子串
+ * 无重复字符的最长子串 not done
  */
 public class A003LengthOfLongestSubstringTest {
     public int lengthOfLongestSubstring(String s) {
