@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * 二叉树的前中后序遍历
- * 思路：递归
+ * 思路：递归（DFS）
  */
 public class TreeOrderTraverseTest {
     List<Integer> preOrder = new ArrayList<>();
