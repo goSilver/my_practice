@@ -15,4 +15,19 @@ public class ListNode {
         this.val = val;
         this.next = next;
     }
+
+    /**
+     * 从当前节点打印链表
+     *
+     * @return 字符串
+     */
+    public String toString() {
+        StringBuilder res = new StringBuilder();
+        ListNode head = this;
+        while (head != null) {
+            res.append(head.val);
+            head = head.next;
+        }
+        return res.toString();
+    }
 }
