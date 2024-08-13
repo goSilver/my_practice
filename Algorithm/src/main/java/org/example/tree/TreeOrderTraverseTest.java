@@ -1,4 +1,4 @@
-package org.example.datastructure;
+package org.example.tree;
 
 import cn.hutool.json.JSONUtil;
 import org.example.base.TreeNode;
