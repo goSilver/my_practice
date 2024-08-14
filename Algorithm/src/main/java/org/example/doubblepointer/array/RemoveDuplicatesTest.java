@@ -12,10 +12,12 @@ public class RemoveDuplicatesTest {
         while (fast < arr.length) {
             if (arr[slow] != arr[fast]) {
                 slow++;
+                // 维护 nums[0..slow] 无重复
                 arr[slow] = arr[fast];
             }
             fast++;
         }
+        // 数组长度为索引 + 1
         return slow + 1;
     }
 
