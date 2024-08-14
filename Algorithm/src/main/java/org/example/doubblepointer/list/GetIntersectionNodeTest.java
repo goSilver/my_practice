@@ -1,4 +1,4 @@
-package org.example.list;
+package org.example.doubblepointer.list;
 
 import org.example.base.ListNode;
 import org.junit.Test;
