@@ -50,4 +50,28 @@ public class TreeOrderTraverseTest {
         System.out.println("中序遍历：" + JSONUtil.toJsonStr(midOrder));
         System.out.println("后序遍历：" + JSONUtil.toJsonStr(postOrder));
     }
+
+    @Test
+    public void case2() {
+        /*
+                1
+           /       \
+          2         5
+         / \       /
+        3   4     6
+                 /
+                7
+         */
+        TreeNode root = new TreeNode(1);
+        root.setLeft(new TreeNode(2));
+        root.setRight(new TreeNode(5));
+        root.getLeft().setLeft(new TreeNode(3));
+        root.getLeft().setRight(new TreeNode(4));
+        root.getRight().setLeft(new TreeNode(6));
+        root.getRight().getLeft().setLeft(new TreeNode(7));
+        traverse(root);
+        System.out.println("前序遍历：" + JSONUtil.toJsonStr(preOrder));
+        System.out.println("中序遍历：" + JSONUtil.toJsonStr(midOrder));
+        System.out.println("后序遍历：" + JSONUtil.toJsonStr(postOrder));
+    }
 }
