@@ -7,7 +7,7 @@ import org.junit.Test;
  * 二叉树的最大深度
  */
 public class MaxDepthTest {
-    private int res;
+    private int maxDepth;
     private int depth;
 
     private void maxDepth(TreeNode root) {
@@ -16,7 +16,7 @@ public class MaxDepthTest {
         depth++;
         // 到达叶子节点才更新res
         if (root.getLeft() == null && root.getRight() == null)
-            res = Math.max(res, depth);
+            maxDepth = Math.max(maxDepth, depth);
         maxDepth(root.getLeft());
         maxDepth(root.getRight());
         depth--;
