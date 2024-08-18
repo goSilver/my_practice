@@ -41,6 +41,6 @@ public class MaxDepthTest {
         root.getRight().setLeft(new TreeNode(6));
         root.getRight().getLeft().setLeft(new TreeNode(7));
         maxDepth(root);
-        assert 4 == res;
+        assert 4 == maxDepth;
     }
 }
