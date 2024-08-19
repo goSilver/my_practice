@@ -51,9 +51,9 @@ public class SumOfTreeTest {
     @Test
     public void case2() {
         /*
-             1
+             4
            /   \
-          2     5
+          0     0
          / \
         5   1
 
