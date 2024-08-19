@@ -1,4 +1,4 @@
-package org.example.tree;
+package org.example.tree.traverse;
 
 import cn.hutool.json.JSONUtil;
 import org.example.base.TreeNode;

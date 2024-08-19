@@ -1,4 +1,4 @@
-package org.example.tree;
+package org.example.tree.traverse;
 
 import org.example.base.TreeNode;
 import org.junit.Test;
