@@ -15,6 +15,8 @@ public class SumOfLeftLeavesTest {
 
     public void traverse(TreeNode root, boolean isLeft) {
         if (root == null) return;
+
+        // 判断是否左叶子节点
         if (isLeft && root.getLeft() == null && root.getRight() == null) {
             result += root.getVal();
         }
