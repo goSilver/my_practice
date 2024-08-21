@@ -29,12 +29,10 @@ public class SumOfLeftLeavesTest {
     public void case1() {
         /*
               3
-           /    \
-          9      20
+            /   \
+           9     20
                 /  \
                15   17
-
-         result：1026
          */
         TreeNode root = new TreeNode(3);
         root.setLeft(new TreeNode(9));
@@ -54,8 +52,6 @@ public class SumOfLeftLeavesTest {
           0     0
          / \
         5   1
-
-         result：1026
          */
         TreeNode root = new TreeNode(4);
         root.setLeft(new TreeNode(9));
