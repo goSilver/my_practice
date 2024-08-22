@@ -42,12 +42,34 @@ public class FibonacciTest {
         return memo[n];
     }
 
+    /**
+     * 自底向上的思路
+     *
+     * @param n
+     * @return
+     */
+    public int fibUp(int n) {
+        if (n == 0 ) return 0;
+        int[] dp = new int[n + 1];
+        dp[0] = 0;
+        dp[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            dp[i] = dp[i-1] + dp[i -2];
+        }
+        return dp[n];
+    }
+
     @Test
     public void case1() {
         int res1 = fib(20);
         int res2 = fibWithDp(20);
+        int res3 = fibUp(20);
+
         System.out.println("result1：" + res1);
         System.out.println("result2：" + res2);
+        System.out.println("result3：" + res3);
+
         assert res2 == res1;
+        assert res3 == res1;
     }
 }
