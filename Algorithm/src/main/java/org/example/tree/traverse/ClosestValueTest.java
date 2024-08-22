@@ -18,12 +18,12 @@ public class ClosestValueTest {
         if (root == null) return;
 
         // 当差值更小时，更新result
-        if (Math.abs(root.getVal() - target) < Math.abs(result - target)) {
-            result = root.getVal();
+        if (Math.abs(root.val - target) < Math.abs(result - target)) {
+            result = root.val;
         }
 
-        traverse(root.getLeft(), target);
-        traverse(root.getRight(), target);
+        traverse(root.left, target);
+        traverse(root.right, target);
     }
 
     @Test
@@ -36,10 +36,10 @@ public class ClosestValueTest {
         1   3
          */
         TreeNode root = new TreeNode(4);
-        root.setLeft(new TreeNode(2));
-        root.setRight(new TreeNode(5));
-        root.getLeft().setLeft(new TreeNode(1));
-        root.getLeft().setRight(new TreeNode(3));
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(5);
+        root.left.left = new TreeNode(1);
+        root.left.right = new TreeNode(3);
         int result = closestValue(root, 3.7);
         assert result == 4;
         System.out.println(result);

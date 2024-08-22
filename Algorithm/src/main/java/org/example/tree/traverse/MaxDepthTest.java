@@ -17,10 +17,10 @@ public class MaxDepthTest {
         if (root == null) return;
         depth++;
         // 到达叶子节点才更新res
-        if (root.getLeft() == null && root.getRight() == null)
+        if (root.left == null && root.right == null)
             maxDepth = Math.max(maxDepth, depth);
-        maxDepth(root.getLeft());
-        maxDepth(root.getRight());
+        maxDepth(root.left);
+        maxDepth(root.right);
         depth--;
     }
 
@@ -29,8 +29,8 @@ public class MaxDepthTest {
      */
     private int maxDepth2(TreeNode root) {
         if (root == null) return 0;
-        int left = maxDepth2(root.getLeft());
-        int right = maxDepth2(root.getRight());
+        int left = maxDepth2(root.left);
+        int right = maxDepth2(root.right);
         // 整棵树的最大深度等于左右子树的最大深度取最大值，
         // 然后再加上根节点自己
         maxDepth = Math.max(left, right) + 1;
@@ -49,12 +49,12 @@ public class MaxDepthTest {
                 7
          */
         TreeNode root = new TreeNode(1);
-        root.setLeft(new TreeNode(2));
-        root.setRight(new TreeNode(5));
-        root.getLeft().setLeft(new TreeNode(3));
-        root.getLeft().setRight(new TreeNode(4));
-        root.getRight().setLeft(new TreeNode(6));
-        root.getRight().getLeft().setLeft(new TreeNode(7));
+        root.left = (new TreeNode(2));
+        root.right = (new TreeNode(5));
+        root.left.left = (new TreeNode(3));
+        root.left.right = (new TreeNode(4));
+        root.right.left = (new TreeNode(6));
+        root.right.left.left = (new TreeNode(7));
 //        maxDepth(root);
         maxDepth2(root);
         assert 4 == maxDepth;

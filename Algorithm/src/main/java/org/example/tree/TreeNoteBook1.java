@@ -17,8 +17,8 @@ public class TreeNoteBook1 {
         if (root == null) {
             return;
         }
-        traverse(root.getLeft());
-        traverse(root.getRight());
+        traverse(root.left);
+        traverse(root.right);
     }
 
     /**

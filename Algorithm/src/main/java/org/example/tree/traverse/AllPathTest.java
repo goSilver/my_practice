@@ -26,15 +26,15 @@ public class AllPathTest {
             return;
         }
         // path前进
-        cur.add(root.getVal());
+        cur.add(root.val);
 
         // 叶子节点时记录path
-        if (root.getLeft() == null && root.getRight() == null) {
+        if (root.left == null && root.right == null) {
             result.add(new ArrayList<>(cur));
         }
 
-        traverse(root.getLeft(), cur);
-        traverse(root.getRight(), cur);
+        traverse(root.left, cur);
+        traverse(root.right, cur);
 
         // path后退
         cur.remove(cur.size()-1);
@@ -54,12 +54,12 @@ public class AllPathTest {
          result：[[1,2,3],[1,2,4],[1,5,6,7]]
          */
         TreeNode root = new TreeNode(1);
-        root.setLeft(new TreeNode(2));
-        root.setRight(new TreeNode(5));
-        root.getLeft().setLeft(new TreeNode(3));
-        root.getLeft().setRight(new TreeNode(4));
-        root.getRight().setLeft(new TreeNode(6));
-        root.getRight().getLeft().setLeft(new TreeNode(7));
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(5);
+        root.left.left = new TreeNode(3);
+        root.left.right  = new TreeNode(4);
+        root.right.left = new TreeNode(6);
+        root.right.left.left = new TreeNode(7);
         List<List<Integer>> result = allPath(root);
         System.out.println(JSONUtil.toJsonStr(result));
     }

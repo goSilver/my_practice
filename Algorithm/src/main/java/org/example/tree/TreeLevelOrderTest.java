@@ -21,12 +21,12 @@ public class TreeLevelOrderTest {
 
         while (!queue.isEmpty()) {
             TreeNode cur = queue.poll();
-            levelOrder.add(cur.getVal());
+            levelOrder.add(cur.val);
 
-            if (cur.getLeft() != null)
-                queue.offer(cur.getLeft());
-            if (cur.getRight() != null)
-                queue.offer(cur.getRight());
+            if (cur.left != null)
+                queue.offer(cur.left);
+            if (cur.right != null)
+                queue.offer(cur.right);
         }
     }
 
@@ -40,11 +40,11 @@ public class TreeLevelOrderTest {
         4   5   6
          */
         TreeNode root = new TreeNode(1);
-        root.setLeft(new TreeNode(2));
-        root.setRight(new TreeNode(3));
-        root.getLeft().setLeft(new TreeNode(4));
-        root.getRight().setLeft(new TreeNode(5));
-        root.getRight().setRight(new TreeNode(6));
+        root.left = (new TreeNode(2));
+        root.right = (new TreeNode(3));
+        root.left.left = (new TreeNode(4));
+        root.right.left = (new TreeNode(5));
+        root.right.right = (new TreeNode(6));
         levelOrder(root);
         assert "[1,2,3,4,5,6]".equals(JSONUtil.toJsonStr(levelOrder));
         System.out.println("层序遍历：" + JSONUtil.toJsonStr(levelOrder));

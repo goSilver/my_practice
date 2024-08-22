@@ -16,7 +16,7 @@ public class LongestConsecutiveTest {
     public void traverse(TreeNode root, int len, int parentVal) {
         if (root == null) return;
 
-        if (root.getVal() == parentVal + 1) {
+        if (root.val == parentVal + 1) {
             len++;
         } else {
             len = 1;
@@ -24,8 +24,8 @@ public class LongestConsecutiveTest {
 
         maxLen = Math.max(maxLen, len);
 
-        traverse(root.getLeft(), len, root.getVal());
-        traverse(root.getRight(), len, root.getVal());
+        traverse(root.left, len, root.val);
+        traverse(root.right, len, root.val);
     }
 
     @Test
@@ -38,9 +38,9 @@ public class LongestConsecutiveTest {
               7
          */
         TreeNode root = new TreeNode(4);
-        root.setLeft(new TreeNode(9));
-        root.setRight(new TreeNode(5));
-        root.getRight().setLeft(new TreeNode(7));
+        root.left = new TreeNode(9);
+        root.right = new TreeNode(5);
+        root.right.left = new TreeNode(7);
         int res = longestConsecutive(root);
         System.out.println(res);
         assert 2 == res;
@@ -56,10 +56,10 @@ public class LongestConsecutiveTest {
               7   6
          */
         TreeNode root = new TreeNode(4);
-        root.setLeft(new TreeNode(9));
-        root.setRight(new TreeNode(5));
-        root.getRight().setLeft(new TreeNode(7));
-        root.getRight().setRight(new TreeNode(6));
+        root.left = new TreeNode(9);
+        root.right = new TreeNode(5);
+        root.right.left = new TreeNode(7);
+        root.right.right = new TreeNode(6);
         int res = longestConsecutive(root);
         System.out.println(res);
         assert 3 == res;

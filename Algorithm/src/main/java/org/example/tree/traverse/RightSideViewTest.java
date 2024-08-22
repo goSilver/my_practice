@@ -24,11 +24,11 @@ public class RightSideViewTest {
 
         depth++;
         if (depth > result.size())
-            result.add(root.getVal());
+            result.add(root.val);
 
         // 注意：此处先遍历右子树
-        traverse(root.getRight());
-        traverse(root.getLeft());
+        traverse(root.right);
+        traverse(root.left);
         depth--;
 
     }
@@ -43,10 +43,10 @@ public class RightSideViewTest {
         5   1
          */
         TreeNode root = new TreeNode(4);
-        root.setLeft(new TreeNode(9));
-        root.setRight(new TreeNode(0));
-        root.getLeft().setLeft(new TreeNode(5));
-        root.getLeft().setRight(new TreeNode(1));
+        root.left = (new TreeNode(9));
+        root.right = (new TreeNode(0));
+        root.left.left = (new TreeNode(5));
+        root.left.right = (new TreeNode(1));
         List<Integer> res = rightSideView(root);
         System.out.println(res);
         assert "[4,0,1]".equals(JSONUtil.toJsonStr(res));
@@ -62,9 +62,9 @@ public class RightSideViewTest {
               5
          */
         TreeNode root = new TreeNode(4);
-        root.setLeft(new TreeNode(9));
-        root.setRight(new TreeNode(0));
-        root.getRight().setLeft(new TreeNode(5));
+        root.left = (new TreeNode(9));
+        root.right = (new TreeNode(0));
+        root.right.left = (new TreeNode(5));
         List<Integer> res = rightSideView(root);
         System.out.println(res);
         assert "[4,0,5]".equals(JSONUtil.toJsonStr(res));

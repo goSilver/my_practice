@@ -17,12 +17,12 @@ public class SumOfLeftLeavesTest {
         if (root == null) return;
 
         // 判断是否左叶子节点
-        if (isLeft && root.getLeft() == null && root.getRight() == null) {
-            result += root.getVal();
+        if (isLeft && root.left == null && root.right == null) {
+            result += root.val;
         }
 
-        traverse(root.getLeft(), true);
-        traverse(root.getRight(), false);
+        traverse(root.left, true);
+        traverse(root.right, false);
     }
 
     @Test
@@ -35,10 +35,10 @@ public class SumOfLeftLeavesTest {
                15   17
          */
         TreeNode root = new TreeNode(3);
-        root.setLeft(new TreeNode(9));
-        root.setRight(new TreeNode(20));
-        root.getRight().setLeft(new TreeNode(15));
-        root.getRight().setRight(new TreeNode(17));
+        root.left = (new TreeNode(9));
+        root.right = (new TreeNode(20));
+        root.right.left = (new TreeNode(15));
+        root.right.right = (new TreeNode(17));
         sumOfLeftLeaves(root);
         System.out.println(result);
         assert result == 24;
@@ -54,10 +54,10 @@ public class SumOfLeftLeavesTest {
         5   1
          */
         TreeNode root = new TreeNode(4);
-        root.setLeft(new TreeNode(9));
-        root.setRight(new TreeNode(0));
-        root.getLeft().setLeft(new TreeNode(5));
-        root.getLeft().setRight(new TreeNode(1));
+        root.left = (new TreeNode(9));
+        root.right = (new TreeNode(0));
+        root.left.left = (new TreeNode(5));
+        root.left.right = (new TreeNode(1));
         sumOfLeftLeaves(root);
         System.out.println(result);
         assert result == 5;

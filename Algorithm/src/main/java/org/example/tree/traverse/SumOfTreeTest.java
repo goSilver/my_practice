@@ -18,17 +18,17 @@ public class SumOfTreeTest {
         if (root == null) return;
 
         // 累加
-        cur = cur * 10 + root.getVal();
+        cur = cur * 10 + root.val;
 
         // 如果是叶子节点，累加到result
-        if (root.getLeft() == null && root.getRight() == null)
+        if (root.left == null && root.right == null)
             result += cur;
 
-        traverse(root.getLeft());
-        traverse(root.getRight());
+        traverse(root.left);
+        traverse(root.right);
 
         // 退出节点时，减法
-        cur = (cur - root.getVal()) / 10;
+        cur = (cur - root.val) / 10;
     }
 
     @Test
@@ -41,8 +41,8 @@ public class SumOfTreeTest {
          result：27
          */
         TreeNode root = new TreeNode(1);
-        root.setLeft(new TreeNode(2));
-        root.setRight(new TreeNode(5));
+        root.left = (new TreeNode(2));
+        root.right = (new TreeNode(5));
         int result = sumOfTree(root);
         assert result == 27;
         System.out.println(result);
@@ -60,10 +60,10 @@ public class SumOfTreeTest {
          result：1026
          */
         TreeNode root = new TreeNode(4);
-        root.setLeft(new TreeNode(9));
-        root.setRight(new TreeNode(0));
-        root.getLeft().setLeft(new TreeNode(5));
-        root.getLeft().setRight(new TreeNode(1));
+        root.left = (new TreeNode(9));
+        root.right = (new TreeNode(0));
+        root.left.left = (new TreeNode(5));
+        root.left.right = (new TreeNode(1));
         int result = sumOfTree(root);
         assert result == 1026;
         System.out.println(result);

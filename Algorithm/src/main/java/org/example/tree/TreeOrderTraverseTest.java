@@ -21,13 +21,13 @@ public class TreeOrderTraverseTest {
             return;
 
         // 前序遍历结果集
-        preOrder.add(root.getVal());
-        traverse(root.getLeft());
+        preOrder.add(root.val);
+        traverse(root.left);
         // 中序遍历结果集
-        midOrder.add(root.getVal());
-        traverse(root.getRight());
+        midOrder.add(root.val);
+        traverse(root.right);
         // 后序遍历结果集
-        postOrder.add(root.getVal());
+        postOrder.add(root.val);
     }
 
     @Test
@@ -40,11 +40,11 @@ public class TreeOrderTraverseTest {
         4   5   6
          */
         TreeNode root = new TreeNode(1);
-        root.setLeft(new TreeNode(2));
-        root.setRight(new TreeNode(3));
-        root.getLeft().setLeft(new TreeNode(4));
-        root.getRight().setLeft(new TreeNode(5));
-        root.getRight().setRight(new TreeNode(6));
+        root.left = (new TreeNode(2));
+        root.right = (new TreeNode(3));
+        root.left.left = (new TreeNode(4));
+        root.right.left = (new TreeNode(5));
+        root.right.right = (new TreeNode(6));
         traverse(root);
         System.out.println("前序遍历：" + JSONUtil.toJsonStr(preOrder));
         System.out.println("中序遍历：" + JSONUtil.toJsonStr(midOrder));
@@ -63,12 +63,12 @@ public class TreeOrderTraverseTest {
                 7
          */
         TreeNode root = new TreeNode(1);
-        root.setLeft(new TreeNode(2));
-        root.setRight(new TreeNode(5));
-        root.getLeft().setLeft(new TreeNode(3));
-        root.getLeft().setRight(new TreeNode(4));
-        root.getRight().setLeft(new TreeNode(6));
-        root.getRight().getLeft().setLeft(new TreeNode(7));
+        root.left = (new TreeNode(2));
+        root.right = (new TreeNode(5));
+        root.left.left = (new TreeNode(3));
+        root.left.right = (new TreeNode(4));
+        root.right.left = (new TreeNode(6));
+        root.right.left.left = (new TreeNode(7));
         traverse(root);
         System.out.println("前序遍历：" + JSONUtil.toJsonStr(preOrder));
         System.out.println("中序遍历：" + JSONUtil.toJsonStr(midOrder));
