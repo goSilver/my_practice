@@ -1,6 +1,6 @@
 package org.example.util;
 
-import org.example.tree.TreeNode;
+import org.example.base.TreeNode;
 
 public class TreeUtil {
 

@@ -1,6 +1,6 @@
 package org.example.tree.traverse;
 
-import org.example.tree.TreeNode;
+import org.example.base.TreeNode;
 import org.example.util.TreeUtil;
 import org.junit.Test;
 
