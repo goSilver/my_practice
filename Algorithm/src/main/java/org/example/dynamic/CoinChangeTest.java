@@ -40,11 +40,38 @@ public class CoinChangeTest {
         return memo[amount];
     }
 
+    /**
+     * 自底向上的思路
+     *
+     * @param coins
+     * @param amount
+     * @return
+     */
+    public int dpWithUp(int[] coins, int amount) {
+        int[] dp = new int[amount+1];
+        Arrays.fill(dp, amount+1);
+
+        dp[0] = 0;
+        for (int i = 0; i < dp.length; i++) {
+            for (int coin : coins) {
+                if (i - coin < 0) {
+                    continue;
+                }
+                dp[i] = Math.min(dp[i], 1 + dp[i -coin]);
+            }
+        }
+        return (dp[amount] == amount + 1) ? -1 : dp[amount];
+    }
+
     @Test
     public void case1() {
         int[] coins = new int[]{1, 2, 5};
-        int result = coinChange(coins, 11);
-        System.out.println(result);
-        assert result == 3;
+        int amount = 11;
+        int result1 = coinChange(coins, amount);
+        System.out.println(result1);
+        int result2 = dpWithUp(coins, amount);
+        System.out.println(result2);
+        assert result1 == 3;
+        assert result2 == 3;
     }
 }
